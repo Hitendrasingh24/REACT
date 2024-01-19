@@ -1,35 +1,26 @@
-import './App.css'
-import { useState } from 'react';
-function App() {
-let [count ,setCount]=useState(1);
-const Add =() =>{
-  count=count+1;
-  if(count>20){
-    count =20;
-  }
-  setCount(count);
+import React, { useState } from 'react'
+
+export default function App() {
+let [count,setCount]=useState(0)
+const add = () =>{
+count ++;
+setCount(count);
 }
-const DEC =()=>{
-  count=count-1;
-  if(count<0){
-    count= 0;
-  }
+const sub = () =>{
+  count--;
   setCount(count);
 }
   return (
     <>
-    <h1>
-      HELLO
-    </h1>
-    <h2>
-      Count: {count}
-    </h2>
-    <button onClick={Add}>
-      Increase:</button>
-    <br/>
-    <button onClick={DEC}>Decrease:</button>
+    <h1> Counter:{count}</h1>
+<div>
+  <button onClick={add}>
+    increase
+  </button>
+  <button onClick={sub}>
+    decrease
+  </button>
+</div>
     </>
   )
 }
-
-export default App
