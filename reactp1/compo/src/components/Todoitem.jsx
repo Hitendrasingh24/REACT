@@ -1,10 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
-export default function Todoitem() {
+export default function Todoitem(props) {
   return (
     <Container>
-        <input  type = 'radio'/>
-        <span>eat</span>
+        {/* {props.completed && <input  type = 'radio'/>} Conditional rendering */}
+        {props.completed ? <></> : <input  type = 'radio'/>}
+
+        <span>{props.name}</span>
         <span>...</span>
     </Container>
   )

@@ -8,8 +8,9 @@ export default function () {
     <div>
         <Container>
         <Header/>
-        <Todoitem/>
-        <Todoitem/>
+        <Todoitem name = 'eat' completed ={false} />
+        <Todoitem name = 'play' completed = {false}/>
+        <Todoitem name = 'study' completed ={false}/>
         <But/>
         </Container>
     </div>
@@ -23,4 +24,5 @@ display:flex;
 flex-direction:column;
 align-items: center;
 background-color:white;
+border-radius:10px
 `

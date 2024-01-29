@@ -16,5 +16,5 @@ display:flex;
   border-radius:100px;
   width:25vw;
 }
-margin-top:15vh;
+margin-top:5vh;
 `
